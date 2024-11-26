@@ -14,6 +14,15 @@ public class Garage {
         this.vehicles = vehicles;
     }
 
+    public Vehicle findVehicle(String plate) {
+        for (Vehicle vehicle : vehicles) {
+            if (vehicle.getPlate().equals(plate)) {
+                return vehicle;
+            }
+        }
+        return null;
+    }
+
     public String getName() {
         return name;
     }
